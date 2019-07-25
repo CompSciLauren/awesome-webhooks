@@ -1,0 +1,24 @@
+{
+  "name": "awesome-webhooks",
+  "version": "1.0.0",
+  "description": "A curated list of awesome GitHub webhooks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CompSciLauren/awesome-webhooks.git"
+  },
+  "author": "Lauren Stephenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CompSciLauren/awesome-webhooks/issues"
+  },
+  "homepage": "https://github.com/CompSciLauren/awesome-webhooks#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

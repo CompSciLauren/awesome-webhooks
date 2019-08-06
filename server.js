@@ -47,7 +47,7 @@ app.post('/payload', async (req, res) => {
               return pullRequest.files[0].raw_url;
             }
           }
-          return 'Error: Pom.xml file not found';
+          return 'Error: ' + fileToInspect + ' file not found.';
         })
         .catch(error => {
           console.log(error);
@@ -74,4 +74,4 @@ app.post('/payload', async (req, res) => {
   res.json({ hello: 'world' });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`This app is listening on port ${port}!`));

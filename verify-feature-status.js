@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 
 let port = 3000;
 
-let fileToInspect = 'server.js'; //fixme to pom.xml
-let feature = 'express'; //fixme to <enabled>true</enabled>
+let fileToInspect = 'pom.xml';
+let feature = '<enabled>true</enabled>';
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

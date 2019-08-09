@@ -18,11 +18,15 @@ app.get('/', (req, res) => {
 app.post('/payload', async (req, res) => {
   switch (req.body.action) {
     case 'opened':
-    case 'closed':
+    case 'closed': // remove after feature development is finished
     case 'reopened':
     case 'synchronize':
       console.log('Pull request action: ' + req.body.action);
       let commitsUrl = req.body.pull_request.commits_url;
+	  
+	  /**
+       * This gets the patch.
+       */
       let patchUrl = await axios
         .get(commitsUrl)
         .then(result => result.data[0])
@@ -34,6 +38,9 @@ app.post('/payload', async (req, res) => {
           console.log('patchUrl Error: ' + error);
         });
 
+	  /**
+       * This gets the individual commits.
+       */
       let individualCommitsUrl = await axios
         .get(patchUrl)
         .then(result => result.data)
@@ -45,6 +52,9 @@ app.post('/payload', async (req, res) => {
           console.log('individualCommitsUrl Error: ' + error);
         });
 
+	  /**
+       * This gets the chosen commit.
+       */
       let chosenCommitUrl = await axios
         .get(individualCommitsUrl)
         .then(result => result.data)
@@ -63,9 +73,12 @@ app.post('/payload', async (req, res) => {
           );
         })
         .catch(error => {
-          console.log(error);
+          console.log("chosenCommitUrl Error: " + error);
         });
 
+	  /**
+       * This gets the raw code and checks whether the feature exists or not.
+       */
       let rawCodeUrl = await axios
         .get(chosenCommitUrl)
         .then(result => result.data)
@@ -83,7 +96,7 @@ app.post('/payload', async (req, res) => {
           return pullRequest;
         })
         .catch(error => {
-          console.log('Error: ' + error);
+          console.log('rawCodeUrl Error: ' + error);
         });
   }
   res.json({ hello: 'world' });

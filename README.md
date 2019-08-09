@@ -23,7 +23,7 @@
 
 ## Webhook Scripts
 
-- [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/verify-feature-status-epic/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
+- [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/verify-feature-status/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
 
 ## Written Guides
 

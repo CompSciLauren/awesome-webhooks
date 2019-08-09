@@ -24,7 +24,7 @@ app.post('/payload', async (req, res) => {
       console.log('Pull request action: ' + req.body.action);
       let commitsUrl = req.body.pull_request.commits_url;
 	  
-	  /**
+      /**
        * This gets the patch.
        */
       let patchUrl = await axios
@@ -38,7 +38,7 @@ app.post('/payload', async (req, res) => {
           console.log('patchUrl Error: ' + error);
         });
 
-	  /**
+      /**
        * This gets the individual commits.
        */
       let individualCommitsUrl = await axios
@@ -52,7 +52,7 @@ app.post('/payload', async (req, res) => {
           console.log('individualCommitsUrl Error: ' + error);
         });
 
-	  /**
+      /**
        * This gets the chosen commit.
        */
       let chosenCommitUrl = await axios
@@ -76,7 +76,7 @@ app.post('/payload', async (req, res) => {
           console.log("chosenCommitUrl Error: " + error);
         });
 
-	  /**
+      /**
        * This gets the raw code and checks whether the feature exists or not.
        */
       let rawCodeUrl = await axios

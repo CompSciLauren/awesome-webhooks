@@ -31,4 +31,4 @@
 
 ## Video Guides
 
-- [Setting up a github webhook URL for Issue & PR notifictions](https://www.youtube.com/watch?v=b_DVXgiByec)
+- [Setting up a github webhook URL for Issue & PR notifications](https://www.youtube.com/watch?v=b_DVXgiByec)

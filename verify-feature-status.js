@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
 app.post('/payload', async (req, res) => {
   switch (req.body.action) {
     case 'opened':
-    case 'closed': // remove after feature development is finished
     case 'reopened':
     case 'synchronize':
       console.log('Pull request action: ' + req.body.action);

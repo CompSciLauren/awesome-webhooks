@@ -22,9 +22,9 @@ app.post('/payload', async (req, res) => {
     case 'synchronize':
       console.log('Pull request action: ' + req.body.action);
       let commitsUrl = req.body.pull_request.commits_url;
-	  
+
       /**
-       * This gets the patch.
+       * Shows the patch url information.
        */
       let patchUrl = await axios
         .get(commitsUrl)
@@ -38,7 +38,7 @@ app.post('/payload', async (req, res) => {
         });
 
       /**
-       * This gets the individual commits.
+       * Shows the individual commits url information.
        */
       let individualCommitsUrl = await axios
         .get(patchUrl)
@@ -52,7 +52,7 @@ app.post('/payload', async (req, res) => {
         });
 
       /**
-       * This gets the chosen commit.
+       * Shows the chosen commit url information.
        */
       let chosenCommitUrl = await axios
         .get(individualCommitsUrl)
@@ -72,26 +72,26 @@ app.post('/payload', async (req, res) => {
           );
         })
         .catch(error => {
-          console.log("chosenCommitUrl Error: " + error);
+          console.log('chosenCommitUrl Error: ' + error);
         });
 
       /**
-       * This gets the raw code and checks whether the feature exists or not.
+       * Shows the raw code url information and checks whether the feature exists or not.
        */
       let rawCodeUrl = await axios
         .get(chosenCommitUrl)
         .then(result => result.data)
         .then(pullRequest => {
-          let isSnapshotEnabled = pullRequest.includes(feature);
-          if (isSnapshotEnabled == true) {
-            isSnapshotEnabled = 'feature exists';
+          let doesFeatureExist = pullRequest.includes(feature);
+          if (doesFeatureExist == true) {
+            doesFeatureExist = 'feature exists';
           } else {
-            isSnapshotEnabled = 'feature does not exist';
+            doesFeatureExist = 'feature does not exist';
           }
           console.log('//////////////////////////////////////////////////////');
           console.log('Pull Request: \n' + pullRequest);
           console.log('//////////////////////////////////////////////////////');
-          console.log('Feature status: ' + isSnapshotEnabled);
+          console.log('Feature status: ' + doesFeatureExist);
           return pullRequest;
         })
         .catch(error => {

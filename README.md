@@ -25,6 +25,7 @@
 
 ## Webhook Scripts
 
+- [lint-pull-requests](https://github.com/CompSciLauren/awesome-webhooks/blob/master/lint-pull-requests.js) - Run a linter every time a new pull request is opened.
 - [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/master/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
 
 ## Written Guides

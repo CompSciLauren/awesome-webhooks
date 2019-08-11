@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://developer.github.com/webhooks/">
-  <img width="455" src="https://github.com/compscilauren/awesome-webhooks/blob/verify-feature-status/github-logo.png" alt="Awesome Webhooks"></a><br>Awesome Webhooks
+  <img width="455" src="https://github.com/compscilauren/awesome-webhooks/blob/master/github-logo.png" alt="Awesome Webhooks"></a><br>Awesome Webhooks
 </h1>
 
 <p align="center"><a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome Lists"></a></p>
@@ -23,7 +23,7 @@
 
 ## Webhook Scripts
 
-- [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/verify-feature-status/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
+- [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/master/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
 
 ## Written Guides
 

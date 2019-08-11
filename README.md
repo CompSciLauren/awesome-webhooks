@@ -29,11 +29,11 @@
 
 ## Written Guides
 
-- [Webhooks documentation at developer.github.com](https://developer.github.com/webhooks/)
+- [Webhooks documentation](https://developer.github.com/webhooks/)
 
 ## Video Guides
 
-- [Setting up a github webhook URL for Issue & PR notifications](https://www.youtube.com/watch?v=b_DVXgiByec)
+- [Setting up a GitHub webhook URL for Issue & PR notifications](https://www.youtube.com/watch?v=b_DVXgiByec)
 
 ## License
 

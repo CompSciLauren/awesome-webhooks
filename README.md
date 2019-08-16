@@ -19,21 +19,21 @@
 
 ## Contents
 
-- [Webhook Scripts](#webhook-scripts)
+- [Webhooks](#webhooks)
 - [Written Guides](#written-guides)
 - [Video Guides](#video-guides)
 
-## Webhook Scripts
+## Webhooks
 
 - [verify-feature-status](https://github.com/CompSciLauren/awesome-webhooks/blob/master/verify-feature-status.js) - Verify whether a certain feature is present in a specific file.
 
 ## Written Guides
 
-- [Webhooks documentation at developer.github.com](https://developer.github.com/webhooks/)
+- [Webhooks documentation](https://developer.github.com/webhooks/)
 
 ## Video Guides
 
-- [Setting up a github webhook URL for Issue & PR notifications](https://www.youtube.com/watch?v=b_DVXgiByec)
+- [Setting up a GitHub webhook URL for Issue & PR notifications](https://www.youtube.com/watch?v=b_DVXgiByec)
 
 ## License
 
